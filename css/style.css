@@ -1,0 +1,306 @@
+/* Custom CSS for Portfolio Website */
+
+/* Font Import */
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Typing animation for hero title */
+.typing-animation {
+    overflow: hidden;
+    border-right: 3px solid;
+    white-space: nowrap;
+    animation: typing 4.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    line-height: 1.2 !important;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: currentColor; }
+}
+
+/* Tech stack icons */
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tech-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.tech-item:hover .tech-icon {
+    animation: float 2s ease-in-out infinite;
+}
+
+/* Tech icon colors */
+/*.python-icon { background: linear-gradient(135deg, #3776ab, #ffd43b); }
+.java-icon { background: linear-gradient(135deg, #f89820, #ed8b00); }*/
+.go-icon { background: linear-gradient(135deg, #00add8, #00758f); }
+.js-icon { background: linear-gradient(135deg, #f7df1e, #f0db4f); }
+.django-icon { background: linear-gradient(135deg, #092e20, #0c4b33); }
+.fastapi-icon { background: linear-gradient(135deg, #009688, #00695c); }
+.spring-icon { background: linear-gradient(135deg, #6db33f, #5a9e3a); }
+/*.express-icon { background: linear-gradient(135deg, #000000, #404040); }*/
+.postgresql-icon { background: linear-gradient(135deg, #336791, #2d5a87); }
+.mongodb-icon { background: linear-gradient(135deg, #47a248, #3e8e41); }
+/*.redis-icon { background: linear-gradient(135deg, #dc382d, #b92c20); }*/
+.elasticsearch-icon { background: linear-gradient(135deg, #005571, #00435a); }
+.aws-icon { background: linear-gradient(135deg, #ff9900, #ec7211); }
+/*.docker-icon { background: linear-gradient(135deg, #2496ed, #1e7ce8); }*/
+.kubernetes-icon { background: linear-gradient(135deg, #326ce5, #2851c7); }
+.terraform-icon { background: linear-gradient(135deg, #623ce4, #5835d1); }
+/*.git-icon { background: linear-gradient(135deg, #f05032, #e34c26); }*/
+/*.jenkins-icon { background: linear-gradient(135deg, #d33833, #c02d28); }*/
+.grafana-icon { background: linear-gradient(135deg, #f46800, #e55100); }
+/*.postman-icon { background: linear-gradient(135deg, #ff6c37, #ff5722); }*/
+.rabbitmq-icon { background: linear-gradient(135deg, #ff6600, #e55a00); }
+.kafka-icon { background: linear-gradient(135deg, #231f20, #1a1718); }
+.celery-icon { background: linear-gradient(135deg, #37b24d, #2f9e44); }
+.sqs-icon { background: linear-gradient(135deg, #ff9900, #ec7211); }
+
+/* Tech card hover effects */
+.tech-card {
+    transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Project cards */
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Filter buttons */
+.filter-btn {
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+    transform: scale(1.05);
+}
+
+/* Navigation */
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: currentColor;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Scroll animations */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Theme transition */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Dark theme scrollbar */
+[data-theme="dark"] ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Form validation styles */
+.input.error,
+.textarea.error {
+    border-color: #ef4444;
+}
+
+.input.success,
+.textarea.success {
+    border-color: #10b981;
+}
+
+/* Loading states */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .typing-animation {
+        font-size: 2.5rem;
+    }
+    
+    .tech-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar,
+    .footer,
+    #contact {
+        display: none;
+    }
+    
+    .hero {
+        min-height: auto;
+        padding: 2rem 0;
+    }
+    
+    .section {
+        page-break-inside: avoid;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .typing-animation {
+        animation: none;
+        border-right: none;
+    }
+}
+
+/* Focus styles for better accessibility */
+.btn:focus,
+.input:focus,
+.textarea:focus {
+    outline: 2px solid;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .tech-icon {
+        border: 2px solid currentColor;
+    }
+    
+    .card {
+        border: 1px solid currentColor;
+    }
+}

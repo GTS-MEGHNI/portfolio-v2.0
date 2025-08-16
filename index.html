@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed El Amine Meghni - Backend Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-base-100 text-base-content font-inter">
+<!-- Navigation -->
+<nav class="navbar bg-base-100/80 backdrop-blur-md fixed top-0 z-50 border-b border-base-300">
+    <div class="navbar-start">
+        <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16"></path>
+                </svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#tech-stack" class="nav-link">Tech Stack</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+        <a class="btn btn-ghost text-xl font-bold">MM</a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+            <li><a href="#hero" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#tech-stack" class="nav-link">Tech Stack</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+    <div class="navbar-end">
+        <button id="theme-toggle" class="btn btn-ghost btn-circle">
+            <svg id="theme-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="hero min-h-screen bg-gradient-to-br from-primary/10 to-secondary/10">
+    <div class="hero-content text-center">
+        <div class="max-w-5xl">
+            <div class="avatar mb-8">
+                <div class="w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                    <div class="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-4xl font-bold text-white">
+                        <img src="assets/avatar.png" alt="Mohamed El Amine Meghni">
+                    </div>
+                </div>
+            </div>
+            <h1 class="text-5xl lg:text-7xl font-bold mb-6 typing-animation">
+                Mohamed El Amine Meghni
+            </h1>
+            <p class="text-xl lg:text-2xl mb-4 text-base-content/80">
+                Senior Backend Engineer | Laravel Expert | DevOps Enthusiast
+            </p>
+            <p class="text-lg mb-8 max-w-2xl mx-auto text-base-content/70">
+                Passionate about building scalable, secure, and high-performance backend systems using Laravel.
+                Specialized in clean architecture, RESTful API design, and database optimization to deliver maintainable
+                and efficient solutions.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
+                <a href="#contact" class="btn btn-outline btn-lg">Get In Touch</a>
+                <a href="assets/resume.pdf" target="_blank" class="btn btn-secondary btn-lg">View Resume</a>
+            </div>
+            <div class="flex justify-center gap-4 mt-8">
+                <a href="https://github.com/GTS-MEGHNI" class="btn btn-circle btn-ghost">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/mohamed-el-amine-meghni-1684a41a3"
+                   class="btn btn-circle btn-ghost">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-base-200">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl lg:text-5xl font-bold mb-4">Who Am I</h2>
+            <div class="w-24 h-1 bg-primary mx-auto"></div>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-lg leading-relaxed mb-6">
+                        Backend Engineer with over 6 years of experience building scalable, secure, and efficient
+                        systems that power modern applications. Driven by a passion for clean architecture and
+                        understanding how things work behind the scenes.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-6">
+                        Specializes in designing and implementing high-performance Restful APIs and scalable backend
+                        solutions using Laravel. Committed to writing maintainable code and following best practices in
+                        security, performance, and software design patterns.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Outside of coding, continuously learning new technologies as needed for projects and quickly
+                        adapting to deliver effective solutions.
+                    </p>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <h3 class="card-title text-primary">Core Strengths</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="badge badge-primary">Solution Architecture</div>
+                            <div class="badge badge-primary">Problem Solving</div>
+                            <div class="badge badge-primary">Backend Development (Laravel)</div>
+                            <div class="badge badge-primary">API Design & Documentation (REST + Swagger)</div>
+                            <div class="badge badge-primary">Docker & Containerization</div>
+                            <div class="badge badge-primary">Git & Version Control</div>
+                            <div class="badge badge-primary">CI/CD (Jenkins, GitHub Actions, GitLab CI)</div>
+                            <div class="badge badge-primary">Unit & Integration Testing (PHPUnit)</div>
+                            <div class="badge badge-primary">Clean, SOLID & DRY Code</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <h3 class="card-title text-secondary">Interests</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="badge badge-secondary">Artificial Intelligence</div>
+                            <div class="badge badge-secondary">DevOps</div>
+                            <div class="badge badge-secondary">System Design</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tech Stack Section -->
+<section id="tech-stack" class="py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl lg:text-5xl font-bold mb-4">Tech Stack</h2>
+            <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+            <p class="text-lg text-base-content/70 max-w-2xl mx-auto">
+                Technologies and tools I use to build amazing systems
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 gap-8">
+            <!-- Languages -->
+            <div class="card bg-base-100 shadow-xl tech-card">
+                <div class="card-body">
+                    <h3 class="card-title text-primary mb-4">Languages</h3>
+                    <div class="grid grid-cols-2 gap-4">
+
+                        <!-- HTML Language -->
+                        <div class="tech-item" data-tech="html">
+                            <div class="tech-icon html-icon">
+                                <img src="assets/icons/languages/html.svg" alt="HTML" class="icon-img">
+                            </div>
+                            <span class="text-sm font-medium">HTML</span>
+                        </div>
+
+                        <!-- CSS Language -->
+                        <div class="tech-item" data-tech="css">
+                            <div class="tech-icon css-icon">
+                                <img src="assets/icons/languages/css.svg" alt="CSS" class="icon-img">
+                            </div>
+                            <span class="text-sm font-medium">CSS</span>
+                        </div>
+
+                        <!-- JavaScript Language -->
+                        <div class="tech-item" data-tech="javascript">
+                            <div class="tech-icon js-icon">
+                                <img src="assets/icons/languages/javascript.svg" alt="JavaScript" class="icon-img">
+                            </div>
+                            <span class="text-sm font-medium">JavaScript</span>
+                        </div>
+
+                        <!-- TypeScript Language -->
+                        <div class="tech-item" data-tech="typescript">
+                            <div class="tech-icon ts-icon">
+                                <img src="assets/icons/languages/typescript.svg" alt="TypeScript" class="icon-img">
+                            </div>
+                            <span class="text-sm font-medium">TypeScript</span>
+                        </div>
+
+                        <!-- PHP Language -->
+                        <div class="tech-item" data-tech="php">
+                            <div class="tech-icon php-icon">
+                                <img src="assets/icons/languages/php.svg" alt="PHP" class="icon-img">
+                            </div>
+                            <span class="text-sm font-medium">PHP</span>
+                        </div>
+
+                        <!-- Python Language -->
+                        <div class="tech-item" data-tech="python">
+                            <div class="tech-icon python-icon">
+                                <img src="assets/icons/languages/python.svg" alt="Python" class="icon-img">
+                            </div>
+                            <span class="text-sm font-medium">Python</span>
+                        </div>
+
+                        <!-- Java Language -->
+                        <div class="tech-item" data-tech="java">
+                            <div class="tech-icon java-icon">
+                                <img src="assets/icons/languages/java.svg" alt="Java" class="icon-img">
+                            </div>
+                            <span class="text-sm font-medium">
+                                Java
+                                <span class="text-xs text-gray-500">(Basic)</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frameworks -->
+            <div class="card bg-base-100 shadow-xl tech-card">
+                <div class="card-body">
+                    <h3 class="card-title text-secondary mb-4">Frameworks</h3>
+                    <div class="grid grid-cols-2 gap-4">
+
+                        <!-- Laravel Framework -->
+                        <div class="tech-item" data-tech="laravel">
+                            <div class="tech-icon laravel-icon">
+                                <img src="assets/icons/frameworks/laravel.svg" alt="Laravel" class="icon-img">
+                            </div>
+                            <span class="text-sm font-medium">Laravel</span>
+                        </div>
+
+                        <!-- Vue Framework (Basic Knowledge) -->
+                        <div class="tech-item" data-tech="vue">
+                            <div class="tech-icon vue-icon">
+                                <img src="assets/icons/frameworks/vue.svg" alt="Vue" class="icon-img">
+                            </div>
+                            <span class="text-sm font-medium">
+                                Vue
+                                <span class="text-xs text-gray-500">(Basic)</span>
+                            </span>
+                        </div>
+
+                        <!-- Express.js Framework -->
+                        <div class="tech-item" data-tech="express">
+                            <div class="tech-icon express-icon">
+                                <img src="assets/icons/frameworks/express.svg" alt="Express.js" class="icon-img">
+                            </div>
+                            <span class="text-sm font-medium">
+                                Express
+                                <span class="text-xs text-gray-500">(Basic)</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Databases -->
+            <div class="card bg-base-100 shadow-xl tech-card">
+                <div class="card-body">
+                    <h3 class="card-title text-accent mb-4">Databases</h3>
+                    <div class="grid grid-cols-2 gap-4">
+
+                        <!-- MySQL Database -->
+                        <div class="tech-item" data-tech="mysql">
+                            <div class="tech-icon mysql-icon">
+                                <img src="assets/icons/databases/mysql.svg" alt="MySQL" class="icon-img">
+                            </div>
+                            <span class="text-sm font-medium">MySQL</span>
+                        </div>
+
+                        <!-- SQL Server Database -->
+                        <div class="tech-item" data-tech="sqlserver">
+                            <div class="tech-icon sqlserver-icon">
+                                <img src="assets/icons/databases/sql-server.svg" alt="SQL Server" class="icon-img">
+                            </div>
+                            <span class="text-sm font-medium">SQL Server</span>
+                        </div>
+
+                        <!-- Redis Database -->
+                        <div class="tech-item" data-tech="redis">
+                            <div class="tech-icon redis-icon">
+                                <img src="assets/icons/databases/redis.svg" alt="Redis" class="icon-img">
+                            </div>
+                            <span class="text-sm font-medium">Redis</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="card bg-base-100 shadow-xl tech-card">
+                <div class="card-body">
+                    <h3 class="card-title text-warning mb-4">Tools</h3>
+                    <div class="grid grid-cols-2 gap-4">
+
+                        <!-- Docker -->
+                        <div class="tech-item" data-tech="docker">
+                            <div class="tech-icon docker-icon">
+                                <img src="assets/icons/tools/docker.svg" alt="Docker" class="icon-img">
+                            </div>
+                            <span class="text-sm font-medium">Docker</span>
+                        </div>
+
+                        <!-- Git -->
+                        <div class="tech-item" data-tech="git">
+                            <div class="tech-icon git-icon">
+                                <img src="assets/icons/tools/git.svg" alt="Git" class="icon-img">
+                            </div>
+                            <span class="text-sm font-medium">Git</span>
+                        </div>
+
+                        <!-- Jenkins -->
+                        <div class="tech-item" data-tech="jenkins">
+                            <div class="tech-icon jenkins-icon">
+                                <img src="assets/icons/tools/jenkins.svg" alt="Jenkins" class="icon-img">
+                            </div>
+                            <span class="text-sm font-medium">Jenkins</span>
+                        </div>
+
+                        <!-- Postman -->
+                        <div class="tech-item" data-tech="postman">
+                            <div class="tech-icon postman-icon">
+                                <img src="assets/icons/tools/postman.svg" alt="Postman" class="icon-img">
+                            </div>
+                            <span class="text-sm font-medium">Postman</span>
+                        </div>
+
+                        <!-- PhpStorm -->
+                        <div class="tech-item" data-tech="phpstorm">
+                            <div class="tech-icon phpstorm-icon">
+                                <img src="assets/icons/tools/phpstorm.svg" alt="PhpStorm" class="icon-img">
+                            </div>
+                            <span class="text-sm font-medium">PhpStorm</span>
+                        </div>
+
+                        <!-- Jira -->
+                        <div class="tech-item" data-tech="jira">
+                            <div class="tech-icon jira-icon">
+                                <img src="assets/icons/tools/jira.svg" alt="Jira" class="icon-img">
+                            </div>
+                            <span class="text-sm font-medium">Jira</span>
+                        </div>
+
+                        <!-- Swagger -->
+                        <div class="tech-item" data-tech="swagger">
+                            <div class="tech-icon swagger-icon">
+                                <img src="assets/icons/tools/swagger.svg" alt="Swagger" class="icon-img">
+                            </div>
+                            <span class="text-sm font-medium">Swagger</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-20 bg-base-200">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl lg:text-5xl font-bold mb-4">Projects</h2>
+            <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+            <p class="text-lg text-base-content/70 max-w-2xl mx-auto">
+                A showcase of my recent work and contributions
+            </p>
+        </div>
+
+        <!--        &lt;!&ndash; Project Filters &ndash;&gt;-->
+        <!--        <div class="flex flex-wrap justify-center gap-4 mb-12">-->
+        <!--            <button class="btn btn-primary filter-btn active" data-filter="all">All Projects</button>-->
+        <!--            <button class="btn btn-outline filter-btn" data-filter="api">APIs</button>-->
+        <!--            <button class="btn btn-outline filter-btn" data-filter="microservices">Microservices</button>-->
+        <!--            <button class="btn btn-outline filter-btn" data-filter="cloud">Cloud</button>-->
+        <!--            <button class="btn btn-outline filter-btn" data-filter="database">Database</button>-->
+        <!--        </div>-->
+
+        <!-- Projects Grid -->
+        <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Mobilis -->
+            <div class="card bg-base-100 shadow-xl project-card" data-category="all">
+                <div class="card-body">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="card-title text-lg">Mobilis Digital Academy Deployment & DevOps</h3>
+                        <div class="flex gap-2">
+                            <!--                            <a href="#" class="btn btn-circle btn-sm btn-ghost">-->
+                            <!--                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">-->
+                            <!--                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>-->
+                            <!--                                </svg>-->
+                            <!--                            </a>-->
+                            <a href="https://mobilis.dz/" target="_blank" class="btn btn-circle btn-sm btn-ghost">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-sm text-base-content/70 mb-4">
+                        Led deployment and DevOps for Mobilis Digital Academy by architecting system infrastructure
+                        with a focus on firewalls and reverse proxies. Streamlined operations and improved consistency
+                        through
+                        automation of package installations and application deployments using shell scripts.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="badge badge-primary badge-sm">Linux</div>
+                        <div class="badge badge-primary badge-sm">Docker</div>
+                        <div class="badge badge-primary badge-sm">Nginx</div>
+                        <div class="badge badge-primary badge-sm">Shell Scripting</div>
+                    </div>
+                    <!--                    <div class="card-actions justify-end">-->
+                    <!--                        <button class="btn btn-sm btn-primary" onclick="openProjectModal('project1')">-->
+                    <!--                            View Details-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+            <!-- SGT -->
+            <div class="card bg-base-100 shadow-xl project-card" data-category="all">
+                <div class="card-body">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="card-title text-lg">SGT Quality Control Dashboard</h3>
+                        <div class="flex gap-2">
+                            <!--                            <a href="#" class="btn btn-circle btn-sm btn-ghost">-->
+                            <!--                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">-->
+                            <!--                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>-->
+                            <!--                                </svg>-->
+                            <!--                            </a>-->
+                            <a href="https://www.sgt-pet.com/sgt-algerie" target="_blank"
+                               class="btn btn-circle btn-sm btn-ghost">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-sm text-base-content/70 mb-4">
+                        In-progress full-stack Laravel application for SGT's quality control system. Built with
+                        multitenancy support,
+                        Redis caching and designed for horizontal scaling with multiple app instances.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="badge badge-primary badge-sm">Laravel</div>
+                        <div class="badge badge-primary badge-sm">Nginx</div>
+                        <div class="badge badge-primary badge-sm">SQL Server</div>
+                        <div class="badge badge-primary badge-sm">Redis</div>
+                        <div class="badge badge-primary badge-sm">Docker</div>
+                        <div class="badge badge-primary badge-sm">Jenkins</div>
+                        <div class="badge badge-primary badge-sm">Livewire</div>
+                        <div class="badge badge-primary badge-sm">JQuery</div>
+                    </div>
+                    <!--                    <div class="card-actions justify-end">-->
+                    <!--                        <button class="btn btn-sm btn-primary" onclick="openProjectModal('project1')">-->
+                    <!--                            View Details-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+            <!-- ANGEM -->
+            <div class="card bg-base-100 shadow-xl project-card" data-category="all">
+                <div class="card-body">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="card-title text-lg">ANGEM Loan Transactions & Backoffice API</h3>
+                        <div class="flex gap-2">
+                            <a href="https://www.angem.dz" target="_blank" class="btn btn-circle btn-sm btn-ghost">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <!--                            <a href="#" class="btn btn-circle btn-sm btn-ghost">-->
+                            <!--                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">-->
+                            <!--                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>-->
+                            <!--                                </svg>-->
+                            <!--                            </a>-->
+                        </div>
+                    </div>
+                    <p class="text-sm text-base-content/70 mb-4">
+                        Developed a comprehensive API for ANGEM to handle daily online transactions and backoffice
+                        management operations. The API supports secure transaction processing, user authentication,
+                        role-based access control, and seamless integration with front-end applications and third-party
+                        services to streamline business workflows.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="badge badge-primary badge-sm">Laravel</div>
+                        <div class="badge badge-primary badge-sm">Nginx</div>
+                        <div class="badge badge-primary badge-sm">SQL Server</div>
+                        <div class="badge badge-primary badge-sm">Docker</div>
+                        <div class="badge badge-primary badge-sm">Redis</div>
+                        <div class="badge badge-primary badge-sm">Jenkins</div>
+                        <div class="badge badge-primary badge-sm">Swagger</div>
+                    </div>
+                    <!--                    <div class="card-actions justify-end">-->
+                    <!--                        <button class="btn btn-sm btn-primary" onclick="openProjectModal('project2')">-->
+                    <!--                            View Details-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+            <!-- SARPI -->
+            <div class="card bg-base-100 shadow-xl project-card" data-category="all">
+                <div class="card-body">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="card-title text-lg">SARPI QHSE Management System</h3>
+                        <div class="flex gap-2">
+                            <a href="https://sarpi.dz" target="_blank" class="btn btn-circle btn-sm btn-ghost">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <!--                            <a href="#" class="btn btn-circle btn-sm btn-ghost">-->
+                            <!--                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">-->
+                            <!--                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>-->
+                            <!--                                </svg>-->
+                            <!--                            </a>-->
+                        </div>
+                    </div>
+                    <p class="text-sm text-base-content/70 mb-4">
+                        Developed a RESTful API for SARPI’s QHSE system enabling users to submit hazard reports via a
+                        mobile app, with an admin web interface for hazard management, monitoring, and reporting. The
+                        API supports secure data handling, user authentication, and role-based access control to
+                        streamline safety compliance workflows.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="badge badge-primary badge-sm">Laravel</div>
+                        <div class="badge badge-primary badge-sm">Nginx</div>
+                        <div class="badge badge-primary badge-sm">Linux</div>
+                        <div class="badge badge-primary badge-sm">SQL Server</div>
+                        <div class="badge badge-primary badge-sm">Swagger</div>
+                    </div>
+                    <!--                    <div class="card-actions justify-end">-->
+                    <!--                        <button class="btn btn-sm btn-primary" onclick="openProjectModal('project2')">-->
+                    <!--                            View Details-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+            <!-- Khentouche -->
+            <div class="card bg-base-100 shadow-xl project-card" data-category="all">
+                <div class="card-body">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="card-title text-lg">Clinic Meal Ticketing System</h3>
+                        <div class="flex gap-2">
+                            <a href="https://www.cliniquekhentouche.com/" target="_blank"
+                               class="btn btn-circle btn-sm btn-ghost">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <!--                            <a href="#" class="btn btn-circle btn-sm btn-ghost">-->
+                            <!--                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">-->
+                            <!--                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>-->
+                            <!--                                </svg>-->
+                            <!--                            </a>-->
+                        </div>
+                    </div>
+                    <p class="text-sm text-base-content/70 mb-4">
+                        Developed a system for Clinique employees to scan QR codes and print meal tickets at
+                        self-service terminals. Included an admin dashboard for managing ticket records, generating
+                        usage statistics, and overseeing meal distribution operations.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="badge badge-primary badge-sm">Laravel</div>
+                        <div class="badge badge-primary badge-sm">MySQL</div>
+                        <div class="badge badge-primary badge-sm">JQuery</div>
+                        <div class="badge badge-primary badge-sm">Python</div>
+                        <div class="badge badge-primary badge-sm">Express.js</div>
+                    </div>
+                    <!--                    <div class="card-actions justify-end">-->
+                    <!--                        <button class="btn btn-sm btn-primary" onclick="openProjectModal('project2')">-->
+                    <!--                            View Details-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+            <!-- ENS Kouba -->
+            <div class="card bg-base-100 shadow-xl project-card" data-category="all">
+                <div class="card-body">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="card-title text-lg">Student Medical Records Management System</h3>
+                        <div class="flex gap-2">
+                            <a href="https://www.ens-kouba.dz/arabic" target="_blank"
+                               class="btn btn-circle btn-sm btn-ghost">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <!--                            <a href="#" class="btn btn-circle btn-sm btn-ghost">-->
+                            <!--                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">-->
+                            <!--                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>-->
+                            <!--                                </svg>-->
+                            <!--                            </a>-->
+                        </div>
+                    </div>
+                    <p class="text-sm text-base-content/70 mb-4">
+                        Continued development and enhancement of an existing full-stack application managing student
+                        medical files and records. Improved the secure admin dashboard by adding features for better
+                        data management, user role control, and ensuring compliance with privacy standards to streamline
+                        health record administration.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="badge badge-primary badge-sm">Laravel</div>
+                        <div class="badge badge-primary badge-sm">MySQL</div>
+                        <div class="badge badge-primary badge-sm">JQuery</div>
+                    </div>
+                    <!--                    <div class="card-actions justify-end">-->
+                    <!--                        <button class="btn btn-sm btn-primary" onclick="openProjectModal('project2')">-->
+                    <!--                            View Details-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+            <!-- JF Larose-->
+            <div class="card bg-base-100 shadow-xl project-card" data-category="all">
+                <div class="card-body">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="card-title text-lg">Natural Beauty Products E-commerce</h3>
+                        <div class="flex gap-2">
+                            <a href="https://jf-larose.com" target="_blank" class="btn btn-circle btn-sm btn-ghost">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <!--                            <a href="#" class="btn btn-circle btn-sm btn-ghost">-->
+                            <!--                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">-->
+                            <!--                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>-->
+                            <!--                                </svg>-->
+                            <!--                            </a>-->
+                        </div>
+                    </div>
+                    <p class="text-sm text-base-content/70 mb-4">
+                        Developed the full-stack customer website and admin dashboard for managing natural beauty
+                        product listings, and inventory. Delivered a responsive, SEO-friendly platform to enhance user
+                        experience and streamline business operations.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="badge badge-primary badge-sm">Laravel</div>
+                        <div class="badge badge-primary badge-sm">MySQL</div>
+                        <div class="badge badge-primary badge-sm">JQuery</div>
+                    </div>
+                    <!--                    <div class="card-actions justify-end">-->
+                    <!--                        <button class="btn btn-sm btn-primary" onclick="openProjectModal('project2')">-->
+                    <!--                            View Details-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+            <!-- Tarzaali-->
+            <div class="card bg-base-100 shadow-xl project-card" data-category="all">
+                <div class="card-body">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="card-title text-lg">Bio Groupe Website & Backoffice System</h3>
+                        <div class="flex gap-2">
+                            <a href="https://laboratoiretarzaali.com" target="_blank"
+                               class="btn btn-circle btn-sm btn-ghost">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <!--                            <a href="#" class="btn btn-circle btn-sm btn-ghost">-->
+                            <!--                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">-->
+                            <!--                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>-->
+                            <!--                                </svg>-->
+                            <!--                            </a>-->
+                        </div>
+                    </div>
+                    <p class="text-sm text-base-content/70 mb-4">
+                        Built a full-stack website and backoffice system for Bio Groupe, providing an online platform
+                        alongside an admin dashboard for managing content, operations, and business workflows
+                        efficiently.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="badge badge-primary badge-sm">Laravel</div>
+                        <div class="badge badge-primary badge-sm">MySQL</div>
+                        <div class="badge badge-primary badge-sm">JQuery</div>
+                    </div>
+                    <!--                    <div class="card-actions justify-end">-->
+                    <!--                        <button class="btn btn-sm btn-primary" onclick="openProjectModal('project2')">-->
+                    <!--                            View Details-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+            <!-- Future Power Store -->
+            <div class="card bg-base-100 shadow-xl project-card" data-category="all">
+                <div class="card-body">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="card-title text-lg">Future Power Store Website & Backoffice</h3>
+                        <div class="flex gap-2">
+                            <a href="https://www.futurepowerstore.com" target="_blank"
+                               class="btn btn-circle btn-sm btn-ghost">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <!--                            <a href="#" class="btn btn-circle btn-sm btn-ghost">-->
+                            <!--                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">-->
+                            <!--                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>-->
+                            <!--                                </svg>-->
+                            <!--                            </a>-->
+                        </div>
+                    </div>
+                    <p class="text-sm text-base-content/70 mb-4">
+                        Developed a full-stack e-commerce website and backoffice system for Future Power Store,
+                        specializing in the distribution of high-quality electrical equipment. The platform enables
+                        seamless online product browsing and purchase, complemented by an admin dashboard for efficient
+                        inventory and order management.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="badge badge-primary badge-sm">Laravel</div>
+                        <div class="badge badge-primary badge-sm">MySQL</div>
+                        <div class="badge badge-primary badge-sm">JQuery</div>
+                    </div>
+                    <!--                    <div class="card-actions justify-end">-->
+                    <!--                        <button class="btn btn-sm btn-primary" onclick="openProjectModal('project2')">-->
+                    <!--                            View Details-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+            <!-- Felhanout -->
+            <div class="card bg-base-100 shadow-xl project-card" data-category="all">
+                <div class="card-body">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="card-title text-lg">Felhanout</h3>
+                        <div class="flex gap-2">
+                            <a href="https://www.felhanout.dz" target="_blank" class="btn btn-circle btn-sm btn-ghost">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <!--                            <a href="#" class="btn btn-circle btn-sm btn-ghost">-->
+                            <!--                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">-->
+                            <!--                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>-->
+                            <!--                                </svg>-->
+                            <!--                            </a>-->
+                        </div>
+                    </div>
+                    <p class="text-sm text-base-content/70 mb-4">
+                        Developed the backend for FelHanout Pro (B2B) and FelHanout (B2C) applications. FelHanout Pro
+                        equips restaurant owners with tools to manage discounts, launch loyalty programs, and create
+                        innovative group-buying offers to boost sales. FelHanout, the customer-facing app, offers an
+                        intuitive experience for discovering restaurants, accessing exclusive deals, and placing orders
+                        seamlessly.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="badge badge-primary badge-sm">Git</div>
+                        <div class="badge badge-primary badge-sm">Laravel</div>
+                        <div class="badge badge-primary badge-sm">MySQL</div>
+                        <div class="badge badge-primary badge-sm">API Development</div>
+                        <div class="badge badge-primary badge-sm">PHPUnit</div>
+                    </div>
+                    <!--                    <div class="card-actions justify-end">-->
+                    <!--                        <button class="btn btn-sm btn-primary" onclick="openProjectModal('project2')">-->
+                    <!--                            View Details-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+            <!-- Cerist AI -->
+            <div class="card bg-base-100 shadow-xl project-card" data-category="all">
+                <div class="card-body">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="card-title text-lg">AI Citation Prediction</h3>
+                        <div class="flex gap-2">
+                            <a href="https://www.cerist.dz" target="_blank" class="btn btn-circle btn-sm btn-ghost">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <!--                            <a href="#" class="btn btn-circle btn-sm btn-ghost">-->
+                            <!--                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">-->
+                            <!--                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>-->
+                            <!--                                </svg>-->
+                            <!--                            </a>-->
+                        </div>
+                    </div>
+                    <p class="text-sm text-base-content/70 mb-4">
+                        Developed a deep learning solution for Cerist Research Center to forecast future citation counts
+                        for scientific publications.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="badge badge-primary badge-sm">Python</div>
+                        <div class="badge badge-primary badge-sm">Tkinter</div>
+                        <div class="badge badge-primary badge-sm">Tensorflow</div>
+                        <div class="badge badge-primary badge-sm">Pandas</div>
+                        <div class="badge badge-primary badge-sm">Scikit-learn</div>
+                        <div class="badge badge-primary badge-sm">PyPy</div>
+                        <div class="badge badge-primary badge-sm">NumPy</div>
+                    </div>
+                    <!--                    <div class="card-actions justify-end">-->
+                    <!--                        <button class="btn btn-sm btn-primary" onclick="openProjectModal('project2')">-->
+                    <!--                            View Details-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+            <!-- Sihaclub -->
+            <div class="card bg-base-100 shadow-xl project-card" data-category="all">
+                <div class="card-body">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="card-title text-lg">Sihaclub</h3>
+                        <div class="flex gap-2">
+                            <a href="https://sihaclub.com" target="_blank" class="btn btn-circle btn-sm btn-ghost">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <!--                            <a href="#" class="btn btn-circle btn-sm btn-ghost">-->
+                            <!--                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">-->
+                            <!--                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>-->
+                            <!--                                </svg>-->
+                            <!--                            </a>-->
+                        </div>
+                    </div>
+                    <p class="text-sm text-base-content/70 mb-4">
+                        Developed the backend for a web-based fitness platform serving both clients and administrators.
+                        The client-facing app offers personalized workout and nutrition programs across different
+                        categories, including weight gain, weight loss, and maintenance. The backoffice enables
+                        efficient management of user profiles, dietary plans, and program categories, ensuring a
+                        seamless health and wellness experience.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="badge badge-primary badge-sm">Git</div>
+                        <div class="badge badge-primary badge-sm">Laravel</div>
+                        <div class="badge badge-primary badge-sm">MySQL</div>
+                        <div class="badge badge-primary badge-sm">API Development</div>
+                        <div class="badge badge-primary badge-sm">Apache</div>
+                        <div class="badge badge-primary badge-sm">Linux</div>
+                        <div class="badge badge-primary badge-sm">Google API</div>
+                        <div class="badge badge-primary badge-sm">Facebook API</div>
+                        <div class="badge badge-primary badge-sm">Stripe API</div>
+                        <div class="badge badge-primary badge-sm">Elastic Email</div>
+                    </div>
+                    <!--                    <div class="card-actions justify-end">-->
+                    <!--                        <button class="btn btn-sm btn-primary" onclick="openProjectModal('project2')">-->
+                    <!--                            View Details-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+            <!-- Jexury -->
+            <div class="card bg-base-100 shadow-xl project-card" data-category="all">
+                <div class="card-body">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="card-title text-lg">Jexury</h3>
+                        <div class="flex gap-2">
+                            <a href="https://www.jexury.com" target="_blank" class="btn btn-circle btn-sm btn-ghost">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <!--                            <a href="#" class="btn btn-circle btn-sm btn-ghost">-->
+                            <!--                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">-->
+                            <!--                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>-->
+                            <!--                                </svg>-->
+                            <!--                            </a>-->
+                        </div>
+                    </div>
+                    <p class="text-sm text-base-content/70 mb-4">
+                        Developed the backend for an online jewelry sales platform, supporting both customers and
+                        administrators. The customer-facing app allows browsing, searching, and purchasing jewelry items
+                        with a seamless shopping experience. The backoffice provides tools for managing product
+                        inventory, categories, orders, and promotions, enabling efficient store operations and enhanced
+                        user engagement.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="badge badge-primary badge-sm">Laravel</div>
+                        <div class="badge badge-primary badge-sm">MySQL</div>
+                        <div class="badge badge-primary badge-sm">Apache</div>
+                        <div class="badge badge-primary badge-sm">Linux</div>
+                        <div class="badge badge-primary badge-sm">Google API</div>
+                        <div class="badge badge-primary badge-sm">Facebook API</div>
+                    </div>
+                    <!--                    <div class="card-actions justify-end">-->
+                    <!--                        <button class="btn btn-sm btn-primary" onclick="openProjectModal('project2')">-->
+                    <!--                            View Details-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+            <!-- Numisky -->
+            <div class="card bg-base-100 shadow-xl project-card" data-category="all">
+                <div class="card-body">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="card-title text-lg">Numisky</h3>
+                        <div class="flex gap-2">
+                            <a href="https://www.numisky.org" target="_blank" class="btn btn-circle btn-sm btn-ghost">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <!--                            <a href="#" class="btn btn-circle btn-sm btn-ghost">-->
+                            <!--                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">-->
+                            <!--                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>-->
+                            <!--                                </svg>-->
+                            <!--                            </a>-->
+                        </div>
+                    </div>
+                    <p class="text-sm text-base-content/70 mb-4">
+                        Developed the client-side of a web-based tourism platform focused on Algeria, enabling users to
+                        explore local destinations, discover attractions, and access travel information seamlessly. The
+                        platform provides an engaging and intuitive experience for planning trips within Algeria.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="badge badge-primary badge-sm">Laravel</div>
+                        <div class="badge badge-primary badge-sm">MySQL</div>
+                        <div class="badge badge-primary badge-sm">Apache</div>
+                        <div class="badge badge-primary badge-sm">Linux</div>
+                        <div class="badge badge-primary badge-sm">Google API</div>
+                        <div class="badge badge-primary badge-sm">Facebook API</div>
+                        <div class="badge badge-primary badge-sm">OpenWeatherMap</div>
+                    </div>
+                    <!--                    <div class="card-actions justify-end">-->
+                    <!--                        <button class="btn btn-sm btn-primary" onclick="openProjectModal('project2')">-->
+                    <!--                            View Details-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+            <!-- SAT-3 -->
+            <div class="card bg-base-100 shadow-xl project-card" data-category="all">
+                <div class="card-body">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="card-title text-lg">SAT-3 Solver</h3>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/GTS-MEGHNI/3-SAT" class="btn btn-circle btn-sm btn-ghost">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-sm text-base-content/70 mb-4">
+                        Developed a SAT-3 solver using Java and JavaFX, focusing on efficient algorithm design and
+                        user-friendly interface. The application allows users to input logical formulas and quickly
+                        determine satisfiability, demonstrating strong problem-solving and software implementation
+                        skills.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="badge badge-primary badge-sm">Java</div>
+                        <div class="badge badge-primary badge-sm">JavaFX</div>
+                        <div class="badge badge-primary badge-sm">CSS</div>
+                    </div>
+                    <!--                    <div class="card-actions justify-end">-->
+                    <!--                        <button class="btn btn-sm btn-primary" onclick="openProjectModal('project2')">-->
+                    <!--                            View Details-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+            <!-- SNDL -->
+            <div class="card bg-base-100 shadow-xl project-card" data-category="all">
+                <div class="card-body">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="card-title text-lg">SNDL Log Analyzer</h3>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/GTS-MEGHNI/SNDL-LOG-ANALYZER"
+                               class="btn btn-circle btn-sm btn-ghost">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-sm text-base-content/70 mb-4">
+                        Developed a log analysis tool for the SNDL platform, performing detailed information extraction
+                        from log files. The application enables efficient identification of patterns, errors, and system
+                        insights, supporting better monitoring and decision-making.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="badge badge-primary badge-sm">Java</div>
+                        <div class="badge badge-primary badge-sm">JavaFX</div>
+                        <div class="badge badge-primary badge-sm">Scene Builder</div>
+                        <div class="badge badge-primary badge-sm">JFoenix</div>
+                        <div class="badge badge-primary badge-sm">CSS</div>
+                        <div class="badge badge-primary badge-sm">MySQL</div>
+                        <div class="badge badge-primary badge-sm">Apache POI</div>
+                    </div>
+                    <!--                    <div class="card-actions justify-end">-->
+                    <!--                        <button class="btn btn-sm btn-primary" onclick="openProjectModal('project2')">-->
+                    <!--                            View Details-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+            <!-- Compiler -->
+            <div class="card bg-base-100 shadow-xl project-card" data-category="all">
+                <div class="card-body">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="card-title text-lg">Compact Compiler</h3>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/GTS-MEGHNI/small-compiler"
+                               class="btn btn-circle btn-sm btn-ghost">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-sm text-base-content/70 mb-4">
+                        Developed a compact compiler in C, specifically tailored for educational purposes. The project
+                        demonstrates understanding of programming language concepts, parsing, and code generation,
+                        providing a practical tool for learning compiler design.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="badge badge-primary badge-sm">Java</div>
+                        <div class="badge badge-primary badge-sm">JavaFX</div>
+                        <div class="badge badge-primary badge-sm">Scene Builder</div>
+                        <div class="badge badge-primary badge-sm">CSS</div>
+                        <div class="badge badge-primary badge-sm">MySQL</div>
+                        <div class="badge badge-primary badge-sm">Apache POI</div>
+                    </div>
+                    <!--                    <div class="card-actions justify-end">-->
+                    <!--                        <button class="btn btn-sm btn-primary" onclick="openProjectModal('project2')">-->
+                    <!--                            View Details-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+            <!-- Recipe Lookup -->
+            <div class="card bg-base-100 shadow-xl project-card" data-category="all">
+                <div class="card-body">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="card-title text-lg">Recipe Lookup</h3>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/GTS-MEGHNI/recipe-finder"
+                               class="btn btn-circle btn-sm btn-ghost">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-sm text-base-content/70 mb-4">
+                        Developed a recipe lookup application using Vue.js, integrating TheMealDB API to provide
+                        comprehensive recipe data. The app allows users to search, browse, and view detailed recipes
+                        with an intuitive and responsive interface.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="badge badge-primary badge-sm">Vue.js</div>
+                        <div class="badge badge-primary badge-sm">JavaScript</div>
+                        <div class="badge badge-primary badge-sm">TheMealDB API</div>
+                        <div class="badge badge-primary badge-sm">CSS</div>
+                    </div>
+                    <!--                    <div class="card-actions justify-end">-->
+                    <!--                        <button class="btn btn-sm btn-primary" onclick="openProjectModal('project2')">-->
+                    <!--                            View Details-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+            <!-- Lychat -->
+            <div class="card bg-base-100 shadow-xl project-card" data-category="all">
+                <div class="card-body">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="card-title text-lg">Lychat</h3>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/GTS-MEGHNI/lychat" class="btn btn-circle btn-sm btn-ghost">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-sm text-base-content/70 mb-4">
+                        Developed a small real-time chat application with Vue.js on the front end and Laravel on the
+                        back end. The platform enables instant messaging, ensuring seamless communication with an
+                        intuitive interface and responsive design.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="badge badge-primary badge-sm">Vue.js</div>
+                        <div class="badge badge-primary badge-sm">Laravel</div>
+                        <div class="badge badge-primary badge-sm">MySQL</div>
+                        <div class="badge badge-primary badge-sm">Pusher</div>
+                        <div class="badge badge-primary badge-sm">Typescript</div>
+                    </div>
+                    <!--                    <div class="card-actions justify-end">-->
+                    <!--                        <button class="btn btn-sm btn-primary" onclick="openProjectModal('project2')">-->
+                    <!--                            View Details-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl lg:text-5xl font-bold mb-4">Professional Experience</h2>
+            <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+            <p class="text-lg text-base-content/70 max-w-2xl mx-auto">
+                My journey through various roles and companies
+            </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+            <!-- Experience Timeline -->
+            <div class="space-y-8">
+                <!-- Sadeem -->
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                            <div>
+                                <h3 class="card-title text-xl text-primary">Senior Backend Engineer</h3>
+                                <p class="text-lg font-semibold">Sadeem Informatique | Birkhadem, Algiers</p>
+                            </div>
+                            <div class="badge badge-primary badge-lg">April 2024 - Present</div>
+                        </div>
+                        <p class="text-base-content/80 mb-4">
+                            As a Software Engineer, I focused on backend development and DevOps, designing scalable
+                            services,
+                            automating deployments, and improving system performance. I worked closely with the team to
+                            maintain high code quality, streamline CI/CD pipelines, and resolve infrastructure
+                            challenges
+                            to ensure robust and efficient operations.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <div class="badge badge-outline">Git</div>
+                            <div class="badge badge-outline">Laravel</div>
+                            <div class="badge badge-outline">MySQL</div>
+                            <div class="badge badge-outline">Microsoft SQL Server</div>
+                            <div class="badge badge-outline">jQuery</div>
+                            <div class="badge badge-outline">API Development</div>
+                            <div class="badge badge-outline">PHPUnit</div>
+                            <div class="badge badge-outline">Swagger</div>
+                            <div class="badge badge-outline">Express.js</div>
+                            <div class="badge badge-outline">Python</div>
+                            <div class="badge badge-outline">Jenkins</div>
+                            <div class="badge badge-outline">Docker</div>
+                        </div>
+                        <ul class="list-disc list-inside space-y-2 text-sm text-base-content/70">
+                            <li>Designed and implemented scalable backend solutions for Felhanout platform</li>
+                            <li>Redefined the architecture of client, B2B, and admin platforms into a modular
+                                structure
+                            </li>
+                            <li>Guided the development team, ensuring code quality and best practices</li>
+                            <li>Optimized database performance and queries for faster response times</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Felhanout -->
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                            <div>
+                                <h3 class="card-title text-xl text-secondary">Lead Backend Developer</h3>
+                                <p class="text-lg font-semibold">Felhanout | Ben Aknoun, Algiers</p>
+                            </div>
+                            <div class="badge badge-secondary badge-lg">Dec. 2023 - Jan. 2024</div>
+                        </div>
+                        <p class="text-base-content/80 mb-4">
+                            As Lead Backend Developer, I led the design and implementation of scalable solutions,
+                            guided the development team, and optimized database performance. My role focused on
+                            architecting efficient systems and addressing technical challenges.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <div class="badge badge-outline">Git</div>
+                            <div class="badge badge-outline">Laravel</div>
+                            <div class="badge badge-outline">MySQL</div>
+                            <div class="badge badge-outline">API Development</div>
+                            <div class="badge badge-outline">PHPUnit</div>
+                        </div>
+                        <ul class="list-disc list-inside space-y-2 text-sm text-base-content/70">
+                            <li>Designed and implemented scalable backend solutions for Felhanout platform</li>
+                            <li>Guided the development team, ensuring code quality and best practices</li>
+                            <li>Optimized database performance and queries for faster response times</li>
+                            <li>Integrated third-party APIs including Google, Facebook, Apple, and Elastic Email</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Cerist -->
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                            <div>
+                                <h3 class="card-title text-xl text-accent">AI Engineer | Master's Thesis Project</h3>
+                                <p class="text-lg font-semibold">Cerist | Ben Aknoun, Algiers</p>
+                            </div>
+                            <div class="badge badge-accent badge-lg">April 2021 - July 2022</div>
+                        </div>
+                        <p class="text-base-content/80 mb-4">
+                            Developed deep learning predictive models using Python and TensorFlow to estimate
+                            the future citation impact of scientific articles at CERIST research center.
+                            Collaborated with researchers to integrate these models into research evaluation processes,
+                            involving feature engineering and processing large datasets.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <div class="badge badge-outline">Python</div>
+                            <div class="badge badge-outline">Tkinter</div>
+                            <div class="badge badge-outline">TensorFlow</div>
+                            <div class="badge badge-outline">Pandas</div>
+                            <div class="badge badge-outline">Scikit-learn</div>
+                            <div class="badge badge-outline">PyPy</div>
+                            <div class="badge badge-outline">NumPy</div>
+                        </div>
+                        <ul class="list-disc list-inside space-y-2 text-sm text-base-content/70">
+                            <li>Designed and implemented predictive deep learning models for scientific article
+                                citations
+                            </li>
+                            <li>Performed feature engineering and processed large datasets efficiently</li>
+                            <li>Integrated AI models into research evaluation workflows in collaboration with
+                                researchers
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Sihaclub -->
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                            <div>
+                                <h3 class="card-title text-xl text-primary">Backend Engineer | Freelance</h3>
+                                <p class="text-lg font-semibold">sihaclub.com</p>
+                            </div>
+                            <div class="badge badge-primary badge-lg">Sep 2020 - April 2022</div>
+                        </div>
+                        <p class="text-base-content/80 mb-4">
+                            As a Backend Engineer for a fitness and online coaching platform, I designed and implemented
+                            scalable
+                            solutions, optimized database performance, and collaborated with cross-functional teams to
+                            enhance
+                            system functionality. I also handled DevOps tasks, overseeing deployment processes to ensure
+                            seamless
+                            and responsive platform operation, contributing to an optimal user experience.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <div class="badge badge-outline">Git</div>
+                            <div class="badge badge-outline">Laravel</div>
+                            <div class="badge badge-outline">MySQL</div>
+                            <div class="badge badge-outline">API Development</div>
+                            <div class="badge badge-outline">Apache</div>
+                            <div class="badge badge-outline">Linux</div>
+                            <div class="badge badge-outline">Google API</div>
+                            <div class="badge badge-outline">Facebook API</div>
+                            <div class="badge badge-outline">Stripe API</div>
+                            <div class="badge badge-outline">Elastic Email</div>
+                        </div>
+                        <ul class="list-disc list-inside space-y-2 text-sm text-base-content/70">
+                            <li>Designed and implemented predictive deep learning models for scientific article
+                                citations
+                            </li>
+                            <li>Performed feature engineering and processed large datasets efficiently</li>
+                            <li>Integrated AI models into research evaluation workflows in collaboration with
+                                researchers
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Jexury -->
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                            <div>
+                                <h3 class="card-title text-xl text-secondary">Backend Developer | Freelance</h3>
+                                <p class="text-lg font-semibold">jexury.com</p>
+                            </div>
+                            <div class="badge badge-secondary badge-lg">May 2020 - Sep 2021</div>
+                        </div>
+                        <p class="text-base-content/80 mb-4">
+                            As a Backend Developer for an online jewelry sales platform, I developed and implemented
+                            scalable backend solutions, enhanced database performance, and collaborated with
+                            cross-functional teams to improve system functionality. I also managed DevOps processes,
+                            overseeing deployments to ensure smooth and responsive platform performance, delivering an
+                            optimal user experience.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <div class="badge badge-outline">Laravel</div>
+                            <div class="badge badge-outline">MySQL</div>
+                            <div class="badge badge-outline">Apache</div>
+                            <div class="badge badge-outline">Linux</div>
+                            <div class="badge badge-outline">Google API</div>
+                            <div class="badge badge-outline">Facebook API</div>
+                        </div>
+                        <ul class="list-disc list-inside space-y-2 text-sm text-base-content/70">
+                            <li>Designed and implemented scalable backend solutions for online jewelry sales</li>
+                            <li>Optimized database queries and improved response times</li>
+                            <li>Collaborated with front-end and marketing teams to enhance features</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- SNDL -->
+                <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                            <div>
+                                <h3 class="card-title text-xl text-accent">Software Engineer</h3>
+                                <p class="text-lg font-semibold">Cerist | Ben Aknoun, Algiers</p>
+                            </div>
+                            <div class="badge badge-accent badge-lg">Jan 2018 - May 2018</div>
+                        </div>
+                        <p class="text-base-content/80 mb-4">
+                            Performed comprehensive analysis of SNDL platform log files, utilizing Java and JavaFX for
+                            intuitive UI development. Extracted valuable insights and patterns from large datasets,
+                            showcasing strong analytical and problem-solving skills.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <div class="badge badge-outline">Java</div>
+                            <div class="badge badge-outline">JavaFX</div>
+                            <div class="badge badge-outline">Scene Builder</div>
+                            <div class="badge badge-outline">JFoenix</div>
+                            <div class="badge badge-outline">CSS</div>
+                            <div class="badge badge-outline">MySQL</div>
+                            <div class="badge badge-outline">Apache POI</div>
+                        </div>
+                        <ul class="list-disc list-inside space-y-2 text-sm text-base-content/70">
+                            <li>Analyzed and processed SNDL platform log files for performance and error insights</li>
+                            <li>Developed a user-friendly UI with JavaFX and SceneBuilder</li>
+                            <li>Extracted actionable insights from large datasets to support decision-making</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-base-200">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl lg:text-5xl font-bold mb-4">Get In Touch</h2>
+            <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+            <p class="text-lg text-base-content/70 max-w-2xl mx-auto">
+                Let's discuss your next project or potential collaboration opportunities
+            </p>
+        </div>
+
+        <div class="grid place-items-center max-w-3xl mx-auto">
+            <!-- Contact Info -->
+            <div class="flex gap-8">
+                <div class="card bg-base-100 shadow-xl flex-1">
+                    <div class="card-body">
+                        <h3 class="card-title text-2xl mb-6">Let's Connect</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="btn btn-circle btn-primary btn-sm">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Email</p>
+                                    <p class="text-base-content/70">meghni.mohamed.el.amine@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="btn btn-circle btn-secondary btn-sm">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Location</p>
+                                    <p class="text-base-content/70">Cap Caxine, Hammamet, Algiers, 16085, Algeria</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="btn btn-circle btn-warning btn-sm">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.518 4.553a1 1 0 01-.27 1.06l-2.29 2.29a16.001 16.001 0 006.586 6.586l2.29-2.29a1 1 0 011.06-.27l4.553 1.518a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Phone</p>
+                                    <p class="text-base-content/70">+213 549 13 67 22</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-base-100 shadow-xl flex-1">
+                    <div class="card-body">
+                        <h3 class="card-title text-xl mb-4">Available For</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 bg-primary rounded-full"></div>
+                                <span>Full-time opportunities</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 bg-secondary rounded-full"></div>
+                                <span>Consulting projects</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 bg-accent rounded-full"></div>
+                                <span>Technical mentoring</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+<!--            <div class="card bg-base-100 shadow-xl">-->
+<!--                <div class="card-body">-->
+<!--                    <h3 class="card-title text-2xl mb-6">Send Message</h3>-->
+<!--                    <form id="contact-form" class="space-y-4">-->
+<!--                        <div class="form-control">-->
+<!--                            <label class="label">-->
+<!--                                <span class="label-text font-semibold">Name *</span>-->
+<!--                            </label>-->
+<!--                            <label for="name"></label>-->
+<!--                            <input type="text" id="name" name="name" placeholder="Your full name"-->
+<!--                                   class="input input-bordered w-full" required>-->
+<!--                            <div class="error-message text-error text-sm mt-1 hidden"></div>-->
+<!--                        </div>-->
+
+<!--                        <div class="form-control">-->
+<!--                            <label class="label">-->
+<!--                                <span class="label-text font-semibold">Email *</span>-->
+<!--                            </label>-->
+<!--                            <label for="email"></label>-->
+<!--                            <input type="email" id="email" name="email" placeholder="your.email@example.com"-->
+<!--                                   class="input input-bordered w-full" required>-->
+<!--                            <div class="error-message text-error text-sm mt-1 hidden"></div>-->
+<!--                        </div>-->
+
+<!--                        <div class="form-control">-->
+<!--                            <label class="label">-->
+<!--                                <span class="label-text font-semibold">Subject *</span>-->
+<!--                            </label>-->
+<!--                            <label for="subject"></label>-->
+<!--                            <input type="text" id="subject" name="subject" placeholder="What's this about?"-->
+<!--                                   class="input input-bordered w-full" required>-->
+<!--                            <div class="error-message text-error text-sm mt-1 hidden"></div>-->
+<!--                        </div>-->
+
+<!--                        <div class="form-control">-->
+<!--                            <label class="label">-->
+<!--                                <span class="label-text font-semibold">Message *</span>-->
+<!--                            </label>-->
+<!--                            <label for="message"></label>-->
+<!--                            <textarea id="message" name="message" placeholder="Tell me about your project or inquiry..."-->
+<!--                                      class="textarea textarea-bordered h-32 w-full" required></textarea>-->
+<!--                            <div class="error-message text-error text-sm mt-1 hidden"></div>-->
+<!--                        </div>-->
+
+<!--                        <div class="form-control mt-6">-->
+<!--                            <button type="submit" class="btn btn-primary btn-lg w-full">-->
+<!--                                <span class="loading loading-spinner loading-sm hidden"></span>-->
+<!--                                Send Message-->
+<!--                            </button>-->
+<!--                        </div>-->
+<!--                    </form>-->
+
+<!--                    &lt;!&ndash; Success/Error Messages &ndash;&gt;-->
+<!--                    <div id="form-message" class="alert hidden mt-4">-->
+<!--                        <span id="form-message-text"></span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer footer-center p-10 bg-base-300 text-base-content">
+    <div>
+        <div class="grid grid-flow-col gap-4">
+            <a href="https://github.com/GTS-MEGHNI" class="btn btn-circle btn-ghost">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/mohamed-el-amine-meghni-1684a41a3" class="btn btn-circle btn-ghost">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+            </a>
+            <a href="mailto:meghni.mohamed.el.amine@gmail.com" class="btn btn-circle btn-ghost">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div>
+        <p class="font-semibold">Mohamed El Amine Meghni—Backend Developer</p>
+        <p class="text-base-content/70">Building scalable systems that power the future</p>
+    </div>
+    <div>
+        <p class="text-base-content/60">© 2025 Mohamed El Amine Meghni. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Project Modal -->
+<dialog id="project-modal" class="modal">
+    <div class="modal-box w-11/12 max-w-4xl">
+        <form method="dialog">
+            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+        </form>
+        <div id="modal-content">
+            <!-- Content will be dynamically loaded -->
+        </div>
+    </div>
+    <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+    </form>
+</dialog>
+
+<script type="module" src="js/script.js"></script>
+</body>
+</html>
